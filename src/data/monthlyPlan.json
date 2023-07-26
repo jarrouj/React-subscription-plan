@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Base Plan",
+      "price": 12,
+      "save" :10,
+      "details": [
+        "All Limited Links",
+        "Own Analytic Platform"
+        
+      ]   
+     },
+    {
+      "name": "Fuse Plan",
+      "price": 24,
+      "save" :20,
+      "details": [
+        "All Limited Links",
+        "Own Analytic Platform",
+        "Chat Support"
+        
+      ]   
+
+    },
+    {
+      "name": "Extro Plan",
+      "price": 48,
+      "save" :30,
+      "details": [
+        "All Limited Links",
+        "Own Analytic Platform",
+        "Chat Support",
+        "Optimize Hashtag"
+        
+      ]   
+
+    },
+    {
+        "name": "Universe Plan",
+        "price": 96,
+        "save" :40,
+        "details": [
+          "All Limited Links",
+          "Own Analytic Platform",
+          "Chat Support",
+          "Optimize Hashtag",
+          "Unlimited User"
+          
+        ]   
+
+    }
+  ]
+  
