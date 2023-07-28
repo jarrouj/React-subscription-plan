@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export const PlansButtons = () => {
   const [ischecked, setIschecked] = useState(false);
-  const [ischeckedBox, setIscheckedBox] = useState(false);
+ 
   const [selectedPlan, setSelectedPlan] = useState('');
   
 
@@ -57,7 +57,7 @@ export const PlansButtons = () => {
       modal.style.display = "none";
     }
         window.onclick = function(event) {
-      if (event.target == modal) {
+      if (event.target === modal) {
         modal.style.display = "none";
       }
     }
@@ -103,7 +103,7 @@ export const PlansButtons = () => {
                     type="checkbox"
                     className="checkmark-green"
                     disabled
-                    checked={ischeckedBox}
+                    checked={false}
                   />
                   <h3
                     className={"text-2xl mb-1 text-center right-20 text-right" + (plans.name === selectedPlan ? " text-white" : " text-blue-900")
@@ -185,11 +185,15 @@ export const PlansButtons = () => {
     <h1>You have chosen: {selectedPlan}</h1>
     <h2>
       The Plan includes:
-        {PLANS.find((plan) => plan.name === selectedPlan)
-            ? `
-                ${PLANS.find((plan) => plan.name === selectedPlan).details.map((detail) => `${detail}`).join('')}
-            `
-            : `Plan details not found for ${selectedPlan}`}
+      {PLANS.find((plan) => plan.name === selectedPlan) ? (
+        <ul>
+          {PLANS.find((plan) => plan.name === selectedPlan).details.map((detail, index) => (
+            <li key={index}>{detail}</li>
+          ))}
+        </ul>
+      ) : (
+        `Plan details not found for ${selectedPlan}`
+      )}
     </h2>
 </div>
 
